@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<title>simple calculator</title>
+<body>
+
+  Value 1<br>
+<input type="number" id="value1"><br>
+  Value 2</br>
+<input type="number" id="value2"><br>
+Operator<br>
+<select id="operator">
+	<option value="add">Add</option>
+	<option value="sub">Subtract</option>
+	<option value="mul">Multiply</option>
+	<option value="div">Divide</option>
+	</select>
+	<br>
+<button type="button" onclick="document.getElementById('result').innerHTML=calc();">Calculate</button><br>
+
+
+<p id ="result"></p>
+<script>
+	function calc() {
+		var operator= document.getElementById("operator").selectedIndex;
+		var x = document.getElementById("value1").value;
+		var y = document.getElementById("value2").value;
+		if (operator == 0){
+			var result = parseFloat(x)+parseFloat(y);
+		  }
+		if (operator == 1){
+				var result = parseFloat(x)-parseFloat(y);
+				}
+		if (operator == 2){
+				var result = parseFloat(x)*parseFloat(y);
+				}
+		if (operator == 3) {
+				var result = parseFloat(x)/parseFloat(y);
+				}
+				if (!isNaN(result)){
+		return result;
+		}
+}
+</script>
+</body>
+
+</html>
