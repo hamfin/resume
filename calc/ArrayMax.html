@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+<head>
+<style>
+body {
+	background-color: lightblue;
+	}
+</style>
+
+<body>
+	<h1>Finding Mmaximum of an Array</h1>
+	<p>Maximum 10 inputs (note: max 3 digit number)</p>
+	<form id="myForm">
+	<input type="number" id="values"><br>
+	<button type="button" onclick= myFunc();>Enter </button> <br><br>
+	<button type="button" onclick= findMax();>Find Highest</button><br>
+	</form>
+	<p id="demo1"></p><br>
+	<p id="demo2"></p>
+</body>
+<script>
+var myArray = [];
+var arrCounter = 0;
+
+function myFunc(){
+			if(arrCounter==10){
+				alert("Maximum 10 inputs");
+				}
+			
+			
+			if(arrCounter<10){
+				myArray.push(document.getElementById("values").value);
+				//console.log(myArray[arrCounter]);
+				arrCounter += 1;
+				
+				//console.log(arrCounter);
+				
+				}
+			document.getElementById("myForm").reset();
+			}
+function findMax(){
+			var text=" ";
+			var counter;
+			var max=0;
+			document.getElementById("demo1").innerHTML= myArray;
+			var len = myArray.length;
+			console.log(len);
+			for (counter=0;counter<len;counter++)
+			{
+				console.log(myArray[counter]);
+				if (myArray[counter]>max)
+				{
+					
+					max=myArray[counter];
+					//console.log(max);
+					}
+			}
+			text = text + "The maximum value entered is: "+ max ;
+			document.getElementById("demo2").innerHTML = text;
+					
+			}
+
+</script>
+</html>
