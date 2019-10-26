@@ -20,22 +20,15 @@ body {
 </body>
 <script>
 var myArray = [];
-var arrCounter = 0;
+var arrIndex = 0;
 
 function myFunc(){
-			/*if(arrCounter==10){
-				alert("Maximum 10 inputs");
-				}*/
-			
-			
-			if(arrCounter<10){
-				myArray.push(document.getElementById("values").value);
-				//console.log(myArray[arrCounter]);
-				arrCounter += 1;
+				var val;
+				val= document.getElementById("values").value;
+				myArray.push(parseFloat(val));
+				arrIndex += 1;
 				
-				//console.log(arrCounter);
 				
-				}
 			document.getElementById("myForm").reset();
 			}
 function findMax(){
@@ -48,7 +41,7 @@ function findMax(){
 			for (counter=0;counter<len;counter++)
 			{
 				console.log(myArray[counter]);
-				if (parseFloat(myArray[counter])>max)
+				if (myArray[counter]>max)
 				{
 					
 					max=myArray[counter];
