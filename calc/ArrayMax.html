@@ -9,7 +9,7 @@ body {
 
 <body>
 	<h1>Finding Mmaximum of an Array</h1>
-	<p>Maximum 10 inputs (note: max 3 digit number)</p>
+	<p>Maximum 10 inputs </p>
 	<form id="myForm">
 	<input type="number" id="values"><br>
 	<button type="button" onclick= myFunc();>Enter </button> <br><br>
@@ -48,7 +48,7 @@ function findMax(){
 			for (counter=0;counter<len;counter++)
 			{
 				console.log(myArray[counter]);
-				if (myArray[counter]>max)
+				if (parseFloat(myArray[counter])>max)
 				{
 					
 					max=myArray[counter];
